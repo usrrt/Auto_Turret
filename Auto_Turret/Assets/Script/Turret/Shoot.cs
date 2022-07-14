@@ -12,9 +12,8 @@ public class Shoot : MonoBehaviour
     public float maxRange;
     private float firingSpeed;
 
-    //private TurretTargetting _targetting;
+    public TurretTargetting targetting;
 
-    // Start is called before the first frame update
     void Start()
     {
         firingSpeed = Random.Range(minRange, maxRange);
@@ -24,9 +23,10 @@ public class Shoot : MonoBehaviour
     private float _elapsedTime;
     public float rotationNum;
     // Update is called once per frame
-    void OnTriggerStay(Collider other)
+    void Update()
     {
-        if(other.tag == "Player")
+        
+        if(targetting.TargetOn)
         {
             _elapsedTime += Time.deltaTime;
 
@@ -37,15 +37,9 @@ public class Shoot : MonoBehaviour
                 _elapsedTime = 0f;
                 
                 GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
-                // 생성된 탄알이 target을 바라보도록
-                bullet.transform.LookAt(target);
                 firingSpeed = Random.Range(minRange, maxRange);
             }
 
-        }
-        else
-        {
-            transform.Rotate(0f, 1f, 0f);
         }
         
     }

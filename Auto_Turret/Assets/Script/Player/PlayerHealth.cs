@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if(other.tag == "Bullet")
         {
-            Die();
+            //Die();
         }
     }
 }

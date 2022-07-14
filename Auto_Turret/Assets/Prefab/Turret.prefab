@@ -222,13 +222,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2563408429874101716}
-  m_LocalRotation: {x: -0, y: 0.6545712, z: -0, w: 0.75600046}
-  m_LocalPosition: {x: 0, y: -4.5, z: 0}
+  m_LocalRotation: {x: -0, y: -0.72100055, z: -0, w: -0.6929346}
+  m_LocalPosition: {x: 0, y: -5.5, z: 0}
   m_LocalScale: {x: 79.99997, y: 6, z: 79.99997}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2563408430908086015}
-  m_RootOrder: 2
+  m_Father: {fileID: 2563408431075865932}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2563408429874101704
 MeshFilter:
@@ -424,9 +424,8 @@ Transform:
   m_Children:
   - {fileID: 2563408429397852460}
   - {fileID: 2563408429532738623}
-  - {fileID: 2563408429874101707}
   m_Father: {fileID: 2563408431075865932}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -349.5, z: 0}
 --- !u!114 &2563408430908086003
 MonoBehaviour:
@@ -441,9 +440,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 4631654712866627812, guid: faec93dbc9cec8142a9a6fc353bb8aef, type: 3}
-  target: {fileID: 0}
+  target: {fileID: 2563408430215253093}
   minRange: 0.3
   maxRange: 1
+  targetting: {fileID: 0}
   setupTurret: 0
   rotationNum: 0
 --- !u!54 &2563408430908086002
@@ -491,6 +491,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2563408430215253093}
+  - {fileID: 2563408429874101707}
   - {fileID: 2563408430908086015}
   m_Father: {fileID: 0}
   m_RootOrder: 0
